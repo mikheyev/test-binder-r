@@ -1,6 +1,6 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Julien Roussel <mikheyev@homologo.us>
+MAINTAINER Sasha Mikheyev <mikheyev@homologo.us>
 
 USER root
 
@@ -16,7 +16,7 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 # Add dependency
-RUN apt-get install -y less vim git r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev
+RUN apt-get install -y less emacs git r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
 
 # Set default CRAN repo
 RUN echo 'options("repos"="http://cran.rstudio.com")' >> /usr/lib/R/etc/Rprofile.site
