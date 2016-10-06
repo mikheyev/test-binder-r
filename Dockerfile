@@ -1,6 +1,6 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Julien Roussel <julien.roussel@gmail.com>
+MAINTAINER Julien Roussel <mikheyev@homologo.us>
 
 USER root
 
