@@ -17,7 +17,8 @@ ENV LANG en_US.UTF-8
 
 # Add dependency
 RUN deb http://cloud.r-project.org/bin/linux/debian jessie-cran3/ >> /etc/apt/sources.list
-RUN apt-get install -y less emacs git r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
+RUN apt-get update
+RUN apt-get install -y less emacs r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
 
 # Set default CRAN repo
 RUN echo 'options("repos"="http://cran.rstudio.com")' >> /usr/lib/R/etc/Rprofile.site
