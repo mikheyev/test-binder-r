@@ -16,7 +16,7 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 # Add dependency
-RUN deb http://cloud.r-project.org/bin/linux/debian jessie-cran3/ >> /etc/apt/sources.list
+RUN echo "deb http://cloud.r-project.org/bin/linux/debian jessie-cran3/" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y less emacs r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
 
