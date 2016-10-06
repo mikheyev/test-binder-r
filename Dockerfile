@@ -18,7 +18,7 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 06F90DE5381BA480
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 381BA480
 RUN apt-get update
 RUN apt-get install -y less emacs r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
 
