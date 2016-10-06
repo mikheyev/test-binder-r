@@ -26,6 +26,5 @@ RUN apt-get install -y less emacs r-base r-base-core r-base-dev r-recommended r-
 RUN echo 'options("repos"="http://cran.rstudio.com")' >> /usr/lib/R/etc/Rprofile.site
 
 # Install IRkernel
-RUN Rscript -e "install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))" 
-#-e "devtools::install_github('IRkernel/IRkernel')" -e "IRkernel::installspec(user = FALSE)"
+RUN Rscript -e "install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))" -e "devtools::install_github('IRkernel/IRkernel')" -e "IRkernel::installspec(user = FALSE)"
 
