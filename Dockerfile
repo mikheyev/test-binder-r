@@ -4,7 +4,9 @@ MAINTAINER Sasha Mikheyev <mikheyev@homologo.us>
 
 USER root
 
-RUN apt-get update
+# Add dependency
+RUN echo "deb http://cloud.r-project.org/bin/linux/debian jessie-cran3/" >> /etc/apt/sources.list
+
 RUN apt-get install -y locales
 
 ## Configure default locale
@@ -15,8 +17,6 @@ RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
-# Add dependency
-RUN echo "deb http://cloud.r-project.org/bin/linux/debian jessie-cran3/" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y less emacs r-base r-base-core r-base-dev r-recommended r-cran-ggplot2 libzmq3-dev libcurl4-gnutls-dev
 
